@@ -34,4 +34,7 @@ Amaç, toplam yol mesafesini minimize etmektir.
 API anahtarları güvenlik nedeniyle GitHub reposuna eklenmemiştir.
 
 ## Not
+Notebook görüntüleme için:
+https://nbviewer.org adresi kullanılabilir.
+
 Bu proje akademik amaçla hazırlanmıştır.
