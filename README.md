@@ -1,26 +1,37 @@
-# aco_yol_optimizasyonu
-
+# Isparta Köyler Arası Aşı Rota Optimizasyonu (ACO)
 
 Bu projede, Isparta ili kırsalında bulunan 15 köyde çocuklara aşı
-yapmakla görevli bir sağlık ekibinin izlemesi gereken en kısa rota,
-Ant Colony Optimization (ACO) algoritması kullanılarak belirlenmiştir.
+yapmakla görevli bir Sağlık Bakanlığı ekibinin izlemesi gereken
+en kısa rota belirlenmiştir.
+
+Problem, Gezgin Satıcı Problemi (TSP) olarak modellenmiş ve
+Ant Colony Optimization (ACO) algoritması kullanılarak çözülmüştür.
+
+## Problem Tanımı
+Ekip, Isparta İl Merkezi'nden çıkıp tüm köyleri yalnızca bir kez
+ziyaret ettikten sonra tekrar merkeze dönmek zorundadır.
+Amaç, toplam yol mesafesini minimize etmektir.
 
 ## Kullanılan Yöntemler
 - Google Maps Geocoding API
 - Haversine Mesafe Hesabı
-- Ant Colony Optimization (TSP)
+- Ant Colony Optimization (ACO)
 - Yakınsama Analizi
 - Harita Üzerinde Rota Görselleştirme
 
-## Proje Yapısı
-- `notebook/` : Jupyter Notebook dosyası
-- `src/` : Algoritma ve yardımcı fonksiyonlar
-- `requirements.txt` : Gerekli Python kütüphaneleri
+## Proje İçeriği
+- Gerçek coğrafi veriler Google Maps API ile alınmıştır
+- Köyler arası mesafeler Haversine formülü ile hesaplanmıştır
+- En kısa kapalı tur ACO algoritması ile elde edilmiştir
+- Yakınsama grafikleri ve iyileştirme oranları analiz edilmiştir
 
-## Çalıştırma
+## Kurulum ve Çalıştırma
 1. Google Maps API key alın
-2. Notebook içinde `API_KEY` alanına ekleyin
-3. Hücreleri sırasıyla çalıştırın
+2. `.env` veya `.streamlit/secrets.toml` dosyasına API key ekleyin
+3. Notebook dosyasını açıp hücreleri sırayla çalıştırın
+
+## Güvenlik
+API anahtarları güvenlik nedeniyle GitHub reposuna eklenmemiştir.
 
 ## Not
-API key güvenlik nedeniyle GitHub'a eklenmemiştir.
+Bu proje akademik amaçla hazırlanmıştır.
